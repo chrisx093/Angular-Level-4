@@ -1,0 +1,24 @@
+<p>contactappedit works!</p>
+<div class="container mt-5">
+    <h2>Edit Contact</h2>
+    <form (ngSubmit)="save()">
+      <div class="mb-3">
+        <label for="firstname" class="form-label">First Name</label>
+        <input type="text" id="firstname" [(ngModel)]="contact.Firstname" name="firstname" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input type="text" id="lastname" [(ngModel)]="contact.Lastname" name="lastname" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" [(ngModel)]="contact.Email" name="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="phonenumber" class="form-label">Phone Number</label>
+        <input type="text" id="phonenumber" [(ngModel)]="contact.Phonenumber" name="phonenumber" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="save()">Save Changes</button>
+    </form>
+  </div>
+  

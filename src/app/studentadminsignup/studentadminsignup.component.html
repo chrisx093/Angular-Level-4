@@ -1,0 +1,19 @@
+<p>studentadminsignup works!</p>
+
+
+
+
+<div class="container">
+    <div class="col-7 mx-auto shadow p-4">
+        <!-- <form action="" (click)="checkemail()"> -->
+        <h3>Admin Signup Page</h3>
+        <input type="text" placeholder="Full Name" class="form-control my-2 shadow-none " [(ngModel)]="fullname" name="fullname">
+        <input type="text" placeholder="Email" class="form-control my-2 shadow-none " [(ngModel)]="email" name="email">
+        <input type="text" placeholder="Password" class="form-control my-2 shadow-none " [(ngModel)]="password" name="password">
+        <input type="text" placeholder="Phone Number" class="form-control my-2 shadow-none " [(ngModel)]="phonenumber" name="phonenumber">
+        
+        <button (click)="signup()">Submit</button>
+    <!-- </form> -->
+    </div>
+
+</div>

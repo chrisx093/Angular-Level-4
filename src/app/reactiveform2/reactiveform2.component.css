@@ -1,0 +1,10 @@
+.font { 
+   
+      font-family: "Bona Nova SC", serif;
+      font-weight: 700;
+      font-style: normal;
+  } 
+  .inputtime{
+    font-weight: lighter;
+    font-size: xx-small;
+  }

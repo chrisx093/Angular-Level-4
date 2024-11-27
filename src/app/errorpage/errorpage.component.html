@@ -1,0 +1,71 @@
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Page</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #ff6a6a, #ffc3a0);
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 72px;
+      margin: 0;
+      color: #ff4d4d;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #ff4d4d;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #ff4d4d;
+      color: white;
+    }
+    .image-container {
+      margin: 20px 0;
+    }
+    .back{
+        margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Error 404</h1>
+    <div class="image-container">
+      <img src="/assets/404 Error Page not Found with people connecting a plug (1).gif" alt="Error Image" width="400" height="200">
+    </div>
+    <p>Oops! The page you're looking for can't be found.</p>
+    <p class="back"><a routerLink="/">Go back to Home</a></p>
+  </div>
+</body>
+</html>
+
+
+

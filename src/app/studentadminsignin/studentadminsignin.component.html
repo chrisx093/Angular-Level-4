@@ -1,0 +1,15 @@
+<p>studentadminsignin works!</p>
+
+
+
+<div class="container">
+    <div class="col-7 mx-auto shadow p-4">
+        <h3>Admin Signin Page</h3>
+      
+        <input type="text" placeholder="Email" class="form-control my-2 shadow-none " [(ngModel)]="email">
+        <input type="text" placeholder="Password" class="form-control my-2 shadow-none " [(ngModel)]="password">
+        <button (click)="login()">Login</button>
+        <h6 class="text-danger text-center">{{msg}}</h6>
+    </div>
+
+</div>

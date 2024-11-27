@@ -1,0 +1,39 @@
+<p>studentviewclassmate works!</p>
+
+
+<div class="container py-5">
+    <h3 class="text-center mb-4">Classmates</h3>
+    <div *ngIf="classmates.length > 0; else noClassmates">
+        <div
+            *ngFor="let student of classmates"
+            class="card shadow-sm my-3 border-1 w-50 mx-auto"
+            style="border-radius: 15px;"
+        >
+            <div class="card-body">
+                <h5 class="card-title text-primary">{{ student.fullname }}</h5>
+                <p class="card-text">
+                    <i class="bi bi-envelope-fill text-muted"></i> Email: 
+                    <span class="text-secondary">{{ student.email }}</span>
+                </p>
+                <p class="card-text">
+                    <i class="bi bi-telephone-fill text-muted"></i> Phone: 
+                    <span class="text-secondary">{{ student.phonenumber }}</span>
+                </p>
+                <p class="card-text">
+                    <i class="bi bi-telephone-fill text-muted"></i> Class: 
+                    <span class="text-secondary">{{ student.class }}</span>
+                </p>
+                <p *ngIf="student.dept" class="card-text">
+                    <i class="bi bi-building text-muted"></i> Department: 
+                    <span class="text-secondary">{{ student.dept }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <ng-template #noClassmates>
+        <div class="alert alert-warning text-center mt-4" role="alert">
+            <i class="bi bi-exclamation-circle-fill"></i> No classmates found.
+        </div>
+    </ng-template>
+</div>
+

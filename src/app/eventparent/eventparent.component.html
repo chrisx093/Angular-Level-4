@@ -1,0 +1,26 @@
+
+
+<div class="container">
+    
+    <div class="col-8 mx-auto shadow p-5">
+        <div>
+            <p>eventparent works!</p>
+            <h3 class="text-success text-center">This is the parent component</h3>
+            <input type="text" class="form-control my-3"  [(ngModel)]="msgToChild">
+            <button class="btn btn-success" (click)="send()">Send to Cild</button>
+            <p class="text-primary">Msg from the child: {{response}}</p>
+        </div>
+        
+        <div>
+
+            <app-eventchild [sendmsg]="NmsgToChild" (eventemit)="receivemsg($event)" ></app-eventchild>
+  
+            
+        </div>
+
+       
+    </div>
+
+
+</div>
+

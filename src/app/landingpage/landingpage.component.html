@@ -1,0 +1,40 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Homepage</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Collapsible Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <!-- Use routerLink for Sign In -->
+          <!-- <a class="btn btn-success nav-link" routerLink="/studentsignin">Student Sign In</a> -->
+        </li>
+        <li class="nav-item ms-2">
+          <!-- Use routerLink for Sign Up -->
+          <!-- <a class="btn btn-danger nav-link" routerLink="/studentsignup">Student Sign Up</a> -->
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="container-fluid">
+
+   <h1 class="text-center">THIS IS THE LANDING PAGE</h1> 
+   <!-- <p>{{this.userserve.msg}}</p>
+   <p>{{userserve.lastname}}</p> -->
+<div *ngFor="let item of userserve.userData">
+    <p>{{item.firstname}}</p> 
+    <p>{{item.lastname}}</p>
+    <p>{{item.age}}</p>
+    <p>{{item.gender}}</p> <hr>
+
+</div>
+
+  
+</div>

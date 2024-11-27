@@ -1,0 +1,56 @@
+<p>studentaddcourse works!</p>
+
+<div class="container my-5">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h2 class="display-4">Manage Courses</h2>
+        <p class="lead">Select and manage your courses with ease.</p>
+      </div>
+    </div>
+  
+    <div class="row">
+      <!-- Available Courses Section -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h3 class="card-title mb-0">Available Courses</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li *ngFor="let course of defaultCourses" class="list-group-item d-flex justify-content-between align-items-center">
+                {{ course }}
+                <button 
+                  (click)="addCourse(course)" 
+                  [disabled]="isCourseSelected(course)" 
+                  class="btn btn-success btn-sm">
+                  <i class="bi bi-plus-circle"></i> Add
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Selected Courses Section -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-success text-white">
+            <h3 class="card-title mb-0">Selected Courses</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li *ngFor="let course of courses" class="list-group-item d-flex justify-content-between align-items-center">
+                {{ course }}
+                <button 
+                  (click)="deleteCourse(course)" 
+                  class="btn btn-danger btn-sm">
+                  <i class="bi bi-trash"></i> Remove
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

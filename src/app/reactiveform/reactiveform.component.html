@@ -1,0 +1,61 @@
+<p>reactiveform works!</p>
+
+<div class="container">
+    <div class="col-6 mx-auto shadow p-5">
+        <h1 class="text-success text-center">Reactive Form</h1>
+
+        <form action="" [formGroup]="formone">
+
+            <input type="text" class="form-control my-2" placeholder="Firstname" formControlName="fname" name="firstname" [class.is-valid]="formone.get('fname')?.valid && formone.get('fname')?.dirty" [class.is-invalid]="formone.get('fname')?.invalid && formone.get('fname')?.dirty">
+
+            <div *ngIf="formone.get('fname')?.invalid && formone.get('fname')?.touched">
+
+                <span *ngIf="formone.get('fname')?.getError('minlength')" class="text-danger"> Minimum of 4 characters </span>
+            </div>
+
+
+            <input type="text" class="form-control my-2" placeholder="Lastname" formControlName="lname" name="lastname" [class.is-valid]="formone.get('lname')?.valid && formone.get('lname')?.dirty" [class.is-invalid]="formone.get('lname')?.invalid && formone.get('lname')?.dirty">
+
+            <div *ngIf="formone.get('lname')?.invalid && formone.get('lname')?.touched ">
+
+                <span *ngIf="formone.get('lname')?.getError('minlength')" class="text-danger"> minimum of 4 characters </span>
+            </div>
+
+
+            <input type="text" class="form-control my-2" placeholder="Phonenumber" formControlName="pnumber" name="phonenumber">
+            <div *ngIf="formone.get('pnumber')?.invalid && formone.get('pnumber')?.touched">
+
+                <span *ngIf="formone.get('pnumber')?.getError('minlength')" class="text-danger"> Minimum length of 10 digits is required </span>
+
+                <span *ngIf="formone.get('pnumber')?.getError('required')" class="text-danger"> Phone number is required  </span>
+
+            </div>
+
+            <input type="text" class="form-control my-2" placeholder="Email" formControlName="email" name="email">
+            <div *ngIf="formone.get('email')?.invalid && formone.get('email')?.touched">
+
+                <span *ngIf="formone.get('email')?.getError('email')" class="text-danger"> Input a valid email address</span>
+
+            </div>
+
+            <input type="checkbox" class="my-2" formControlName="cbox" name="cbox"> <span>Accept terms</span>
+            <div>
+
+                <span class="text-danger" *ngIf="formone.value['cbox']==false"> {{this.msg}} </span>
+                <span *ngIf="formone.value['cbox']==true"></span>
+
+            </div>
+
+            
+
+
+            <button class="btn btn-outline-success w-100" (click)="reactive()" [disabled]="formone.invalid || formone.value['cbox']==false">Reactive form</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+

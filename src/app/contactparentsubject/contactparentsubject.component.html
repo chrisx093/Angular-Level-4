@@ -1,0 +1,25 @@
+<p>contactparentsubject works!</p>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>First name</td>
+            <td>Last name</td>
+            <td>Email</td>
+            <td>Phone number</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr (click)="show(i)" *ngFor="let details of this.data.storedcontact; let i = index">
+            <td>{{details.Firstname}}</td>
+            <td>{{details.Lastname}}</td>
+            <td>{{details.Email}}</td>
+            <td>{{details.Phonenumber}}</td>
+            <td><button >update</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<app-contactchildbehavioursubject></app-contactchildbehavioursubject>

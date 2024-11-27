@@ -1,0 +1,18 @@
+.custom-btn {
+    transition: all 0.3s ease;
+  }
+
+  .custom-btn:hover {
+    background-color: #0056b3; /* Darker blue */
+    color: #ffffff;           /* White text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transform: scale(1.05);   /* Slightly larger */
+  }
+  
+  .result{
+    background-color: aliceblue;
+    border: #0056b3;
+    border-radius: 3rem;
+    padding: 20px;
+    margin-top: 10px;
+  }

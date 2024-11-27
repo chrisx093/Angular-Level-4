@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+
+  <section class="result">
+    
+    <div *ngFor="let details of this.data.storedcontact; let i = index" class="d-flex align-items-center mb-2">
+      <div class="flex-grow-1 me-3">
+        <span class="me-5"> {{details.Firstname}}</span>
+        <span class="me-5">{{details.Lastname}}</span>
+        <span class="me-5">{{details.Email}}</span>
+        <span class="me-5">{{details.Phonenumber}}</span>
+        
+      </div>
+    </div>
+  </section>
+  
+  

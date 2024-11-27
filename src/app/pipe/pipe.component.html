@@ -1,0 +1,48 @@
+<p>pipe works!</p>
+<p>{{'agriculture' | uppercase }}</p>
+<p>{{'HOME' | lowercase }}</p>
+
+<div>{{time|date}}</div>
+<p>{{time|date: 'short'}}</p>
+<p>{{time|date: 'long'}}</p>
+<p>{{time|date: 'medium'}}</p>
+<p>{{time|date: 'full'}}</p>
+
+<p class="fw-bold">FOR TIME</p>
+<p>{{time| date: 'shortTime'}}</p>
+<p>{{time| date: 'fullTime'}}</p>
+<p>{{time| date: 'longTime'}}</p>
+<p>{{time| date: 'mediumTime'}}</p>
+
+<p class="fw-bold">FOR DATE</p>
+<p>{{time| date: 'shortDate'}}</p>
+<p>{{time| date: 'fullDate'}}</p>
+<p>{{time| date: 'longDate'}}</p>
+<p>{{time| date: 'mediumDate'}}</p>
+<p>{{time| date: 'd/m/y'}}</p>
+
+
+<p class="fw-bold">FOR CURRENCY</p>
+<p>{{10000| currency}}</p>
+<p>{{10000| currency: 'EUR'}}</p>
+<p>{{10000| currency: 'EUR': 'code'}}</p>
+<p>{{10000| currency: 'NGN': 'symbol-narrow'}}</p>
+<p>{{10000| currency: 'NGN': 'code'}}</p>
+<p>{{10000| currency: 'GBP'}}</p>
+<p>{{10000| currency: 'YEN'}}</p>
+<p>{{10000| currency: 'GHC'}}</p>
+<p>{{10000| currency: 'CNY'}}</p>
+
+
+<p class="fw-bold">TO EXTRACT LENGTH OF A PARTICULAR TEXT</p>
+
+<P>{{'investments' | slice:0:7}}</P>
+<P>{{'Everlasting' | slice:0:8}}</P>
+<P>{{'Everlasting' | slice:0:4}}</P>
+<P>{{'Everlasting' | slice:4:8}}</P>
+<P>{{'Everlasting' | slice:4:11}}</P>
+<P>{{'Everlasting' | slice:8:10}}</P>
+<P>{{'Everlasting' | slice:6:11}}</P>
+<P>{{'Everlasting' | slice:7:11}}</P>
+<P>{{'Everlasting' | slice:0:3}}</P>
+<P>{{'Everlasting' | slice:7:10}}</P>

@@ -1,0 +1,27 @@
+<p>studenteditprofile works!</p>
+
+
+<div *ngIf="currentstudent" class="w-50 mx-auto shadow p-2">
+    <h1>Edit Profile</h1>
+    <form (ngSubmit)="onSave()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="currentstudent.fullname" name="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="currentstudent.email" name="email" required disabled=""/>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Password</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="currentstudent.password" name="Password" required disabled=""/>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Phone Number</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="currentstudent.phonenumber" name="Phone Number" required />
+      </div>
+      <!-- Add other fields as necessary -->
+      <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+  </div>
+  

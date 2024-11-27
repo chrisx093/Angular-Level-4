@@ -1,0 +1,56 @@
+<p>reactiveform2 works!</p>
+
+<div class="container">
+    <div class="col-6 p-4 mx-auto shadow">
+        <h3 class="text-center"> Note App</h3>
+
+        <form action="" [formGroup]="formtwo" class="p-3">
+            <input type="text" placeholder="Title" formControlName="title" name="title" class="w-75 form-control"> <br>
+            <textarea class="w-75 form-control" placeholder="Description" formControlName="desc" name="desc"></textarea>
+            <button class="btn btn-outline-success mt-2" (click)="submit()">Submit</button>
+
+        </form>
+    </div>
+
+</div >
+<section *ngFor="let item of data let i=index" class="container-fluid col-6 mx-auto shadow p-3 mt-5 border border-success rounded">
+   <p class="text-success fw-bold text-uppercase font"> Book TItle : {{item.title}}</p> 
+   <small class="text-success fw-bold inputtime">Input Time : {{item.createdat}}</small> 
+
+   <div class="d-flex justify-content-start gap-3 mt-2">
+  <button (click)="view(i)" class="btn btn-outline-success p-2 text-white bg-success fw-bold">View</button>
+  <button (click)="del(i)" class="btn btn-outline-danger p-2 text-white bg-danger fw-bold">Delete</button>
+  <button  (click)="edit(i)" class="btn btn-outline-primary p-2 text-white bg-primary fw-bold">Edit</button>
+</div>
+
+    
+</section>
+
+
+<div *ngIf="isEditModalOpen" class="modal fade show d-block" tabindex="-1" role="dialog" style="background: rgba(0,0,0,0.5);">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Item</h5>
+          <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="saveEdit()">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" [(ngModel)]="currentItem.title" name="title" required />
+            </div>
+            <div class="mb-3">
+              <label for="desc" class="form-label">Description</label>
+              <input type="text" class="form-control" id="desc" [(ngModel)]="currentItem.desc" name="desc" required />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

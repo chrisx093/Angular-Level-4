@@ -1,0 +1,30 @@
+<p>studentadmindashboard works!</p>
+
+<div class="admin-container">
+    <h1>Student Accounts</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Class</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.fullname }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.class }}</td>
+          <td>{{ student.isActive ? 'Active' : 'Deactivated' }}</td>
+          <td>
+            <button (click)="toggleStatus(student)">
+              {{ student.isActive ? 'Deactivate' : 'Activate' }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
